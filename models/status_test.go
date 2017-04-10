@@ -2,8 +2,6 @@
 // Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
 
-// +build disabled
-
 package models
 
 import (
@@ -35,7 +33,7 @@ func TestGetCommitStatuses(t *testing.T) {
 		assert.Equal(t, statuses[3].Context, "ci/awesomeness")
 		assert.Equal(t, statuses[3].State, CommitStatusFailure)
 
-		assert.Equal(t, statuses[4].Context, "ci/awesomeness")
+		assert.Equal(t, statuses[4].Context, "deploy/awesomeness")
 		assert.Equal(t, statuses[4].State, CommitStatusError)
 	}
 }
